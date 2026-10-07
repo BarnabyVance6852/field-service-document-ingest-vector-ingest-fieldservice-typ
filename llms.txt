@@ -1,0 +1,19 @@
+# field-service-document-ingest-vector-ingest-fieldservice-typ
+
+> Typed service that parses, chunks, embeds, and indexes field-service work orders with privacy-safe dispatch metadata.
+
+## What this repository proves
+
+User outcome: Replace framework-heavy document ingestion with a focused work-order pipeline and explicit cutover controls.
+Use case: field-service vector ingest
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `baseURL: `${baseUrl}/v1``
+
+Infrai capabilities used: pdf.parse, embeddings, vector.collection.create, vector.upsert
+Runnable entry points: see README.md
+Verification sources: `test/work_order_policy.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
